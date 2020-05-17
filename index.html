@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="validar.js"></script>
+</head>
+<h1>Formulario de registro</h1>
+<form action="registrar.php" method="POST" class="form-register" onsubmit="return validar()">
+    <h2 class="form-titulo">Crea una cuenta</h2>
+    <div class="contenedor-inputs">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombres" class="input-48" required
+            pattern="[a-zA-Z]+">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48" required>
+        <input type="email" id="correo" name="correo" placeholder="Correo" class="input-100" required>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48" required>
+        <input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48" required>
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono" class="input-100" required>
+        <div class="sexo">
+            <input type="radio" name="sexo" value="Masculino" checked>Masculino
+            <input type="radio" name="sexo" value="Femenino">Femenino
+            <input type="radio" name="sexo" value="Otro">Otro
+        </div>
+        <div class="terminos">
+        <input type="checkbox" name="terminos" value="Aceptar" required>Aceptar terminos y condiciones
+        </div>
+        <div>
+        <input type="submit" value="Registrar" class="btn-enviar">
+        </div>
+        <p class="form-link">¿Ya tienes una cuenta? <a href="">Ingresa aquí</a></p>
+    </div>
+
+    </body>
+
+</html>
